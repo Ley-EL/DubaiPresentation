@@ -35,15 +35,13 @@ let VideoIndex = 1;
 ShowVideos(VideoIndex);
 
 function ChangeVideos(n) {
-    console.log("Before changevideo " + VideoIndex);
     ShowVideos(VideoIndex += n);
-    console.log("After changevideo " + VideoIndex);
 }
 
 function ShowVideos(n) {
 
     let video = document.querySelector('video');
-    let videosSourceName = ["videos/155.mp4", "videos/164.mp4", "videos/165.mp4"];
+    let videosSourceName = ["videos/dubai.mp4"];
 
     if(n < 1) {
         VideoIndex = videosSourceName.length;
@@ -53,8 +51,5 @@ function ShowVideos(n) {
         VideoIndex = 1;
     }
 
-    console.log("Before showvideo " + VideoIndex);
     video.setAttribute("src", videosSourceName[VideoIndex - 1])
-    
-    console.log("After showvideo " + VideoIndex);
 }
